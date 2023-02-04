@@ -1,0 +1,889 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+/* font-family: 'MedievalSharp', cursive; */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    background-image: url(pexels-francesco-ungaro-206066.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+nav{
+  top: 0%;
+}
+.navbar {
+  z-index: 4;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#backgroundvideo{
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+}
+/*----------bootstrap-navbar-css------------*/
+.navbar-logo {
+  color: #fff;
+  height: 58px;
+}
+.navbar-mainbg {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0px;
+}
+#navbarSupportedContent {
+  overflow: hidden;
+  position: relative;
+}
+#navbarSupportedContent ul {
+  padding: 0px;
+  margin: 0px;
+}
+#navbarSupportedContent ul li a i {
+  margin-right: 10px;
+}
+#navbarSupportedContent li {
+  list-style-type: none;
+  float: left;
+}
+#navbarSupportedContent ul li a {
+	font-family: 'MedievalSharp', cursive;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  padding: 20px 20px;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+}
+#navbarSupportedContent > ul > li.active > a {
+  color: #5161ce;
+  background-color: transparent;
+  transition: all 0.7s;
+}
+#navbarSupportedContent a:not(:only-child):after {
+  content: "\f105";
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 14px;
+  font-family: "Font Awesome 5 Free";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-weight: 900;
+  transition: 0.5s;
+}
+#navbarSupportedContent .active > a:not(:only-child):after {
+  transform: rotate(90deg);
+}
+.hori-selector {
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background-color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 10px;
+}
+.hori-selector .right {
+  right: -25px;
+}
+.hori-selector .left {
+  left: -25px;
+}
+
+.hori-selector .right:before {
+  bottom: 0;
+  right: -25px;
+}
+.hori-selector .left:before {
+  bottom: 0;
+  left: -25px;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-custom {
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .navbar-expand-custom .navbar-nav {
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .navbar-expand-custom .navbar-toggler {
+    display: none;
+  }
+  .navbar-expand-custom .navbar-collapse {
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  #navbarSupportedContent ul li a {
+    padding: 12px 30px;
+  }
+  .hori-selector {
+    margin-top: 0px;
+    margin-left: 10px;
+    border-radius: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+  .hori-selector .left,
+  .hori-selector .right {
+    right: 10px;
+  }
+  .hori-selector .left {
+    top: -25px;
+    left: auto;
+  }
+  .hori-selector .right {
+    bottom: -25px;
+  }
+  .hori-selector .left:before {
+    left: -25px;
+    top: -25px;
+  }
+  .hori-selector .right:before {
+    bottom: -25px;
+    left: -25px;
+  }
+}
+.display-n {
+  display: none;
+}
+.display-b {
+  display: block;
+}
+.fadeIn {
+  animation: fadeInAnimation 5s linear;
+  animation-fill-mode: forwards;
+}
+.fadeOut {
+  animation: fadeOutAnimation 5s linear;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.teamcontainer{
+  background-image: url(Untitled-design.jpg);
+  background-size: cover;
+  background-position: right;
+  scroll-behavior: smooth;
+  position: absolute;
+  top: 20vh;
+  height: 70vh;
+  width: 60vw;
+  border-radius: 10px;
+  overflow: scroll;
+  overflow-x: hidden;
+  z-index: 4;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.overlayblack{
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+.teamcontainer::-webkit-scrollbar{
+  display: none;
+  scroll-behavior: smooth;
+}
+.ourteam{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  top: 23%;
+}
+@media(max-width:500px){
+  .ourteam{
+    display: none;
+  }
+  .teamcontainer{
+    top: 13vh;
+    height: 81vh;
+    width: 84vw;
+  }
+}
+.leftalign{
+  display:flex ;
+  flex-direction: column;
+  margin-left: 4%;
+}
+.rightalign{
+  display:flex ;
+  flex-direction: column;
+  margin-right: 4%;
+}
+.contentname{
+  display: flex;
+  justify-content: center;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 600;
+  margin-top: 58px;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+}
+.cth{
+  display: flex;
+  justify-content: center;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+.ctm{
+  display: flex;
+  justify-content: center;
+  font-family: 'MedievalSharp', cursive;
+  font-weight: 400;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+button i{
+    cursor: pointer;
+}
+
+body{
+  display: grid;
+  place-items: center;
+}
+.slider{
+  height: 28vh;
+  margin: auto;
+  position: relative;
+  width: 60vw;
+  display: grid;
+  place-items: center ;
+  overflow: hidden;
+  margin-top: 27px;
+  margin-bottom: 56px;
+}
+
+.slide{
+  height: 28vh;
+  width: 21vh;
+  margin: 0vh 4vh;
+  display: flex;
+  align-items: center;
+  perspective: 100px ;
+}
+
+img{
+  height: 28vh;
+  width: 21vh;
+}
+
+.slider::before,
+.slider::after{
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,
+  rgba(255,255,255,0) 100%);
+  content: '';
+  height: 100%;
+  position: absolute;
+  z-index: 2;
+}
+.slider::before{
+  left: 0;
+  top: 0;
+}
+.slider::after{
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg); 
+}
+.cardnew:before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  content: "Yeah!";
+  text-align: center;
+  transform:translateY(-100%);
+  font-size: 25px;
+  color:#fff;
+ display: block;
+  background-color: rgba(12, 12, 12, 0.477);
+  z-index: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ font-family: sans-serif;
+  transition: transform .4s ease-in;
+  border:4px solid white;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.cardnew:after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+  content: "Yeah!";
+  text-align: center;
+  transform:translateY(100%);
+  font-size: 25px;
+  color:#fff;
+ display: block;
+  background-color: rgba(12, 12, 12, 0.477);
+  z-index: 1;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+ font-family: sans-serif;
+  transition: transform .4s ease-in;
+  border:4px solid rgb(255, 255, 255);
+  justify-content: center;
+  box-sizing: border-box;
+}
+.cardnew:hover::before{
+transform: translateY(0%); 
+
+}
+.cardnew:hover::after{
+  transform: translateY(0%); 
+}
+
+.slide-track{
+  display: flex;
+}
+.slide-trackct{
+  animation: scrollct 15s linear infinite;
+}
+
+@keyframes scrollct{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-29vh*6));
+  }
+}
+.slide-trackcb{
+  animation: scrollcb 15s linear infinite;
+}
+
+@keyframes scrollcb{
+  0%{
+    transform: translateX(calc(-29vh*5));
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+.slide-trackwt{
+  animation: scrollwt 15s linear infinite;
+}
+
+@keyframes scrollwt{
+  0%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(calc(-29vh*5));
+  }
+}
+
+.disablewb{
+  display: none;
+}
+.disablepb{
+  display: none;
+}
+@media(max-width:192vh){
+  .disablewb{
+    display: block;
+  }
+  .slide-trackwb{
+    animation: scrollwb 15s linear infinite;
+  }
+  
+  @keyframes scrollwb{
+    0%{
+      transform: translateX(calc(-29vh*4));
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  .disablepb{
+    display: block;
+  }
+  .slide-trackpb{
+    animation: scrollpb 15s linear infinite;
+  }
+  
+  @keyframes scrollpb{
+    0%{
+      transform: translateX(calc(-29vh*4));
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+}
+
+.designm{
+  background-size: cover;
+}
+.disabledt{
+  display: none;
+}
+.visibledt{
+  margin: 0 6vh;
+}
+@media(max-width : 160vh){
+  .visibledt{
+    margin: 0 4vh;
+  }
+  .disabledt{
+    display: block;
+  }
+  .slide-trackdt{
+    animation: scrolldt 15s linear infinite;
+  }
+  
+  @keyframes scrolldt{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-29vh*3));
+    }
+  }
+  .slide-trackdb{
+    animation: scrolldb 15s linear infinite;
+  }
+  
+  @keyframes scrolldb{
+    0%{
+      transform: translateX(calc(-29vh*3));
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+}
+
+.disablpt{
+  display: none;
+}
+
+@media (max-width:148vh){
+  .slide-trackpt{
+    animation: scrollpt 15s linear infinite;
+  }
+  
+  @keyframes scrollpt{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-29vh*3));
+    }
+  }
+  .disablept{
+    display: block;   
+  }
+}
+
+.disableet{
+  display: none;
+}
+
+@media(max-width:150vh){
+  .disableet{
+    display: block;
+  }
+  .slide-tracket{
+    animation: scrollet 15s linear infinite;
+  }
+  
+  @keyframes scrollet{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-29vh*3));
+    }
+  }
+}
+
+.disablelt{
+  display: none;
+}
+
+@media (max-width:100vh){
+  .slide-tracklt{
+    animation: scrollpt 15s linear infinite;
+  }
+  
+  @keyframes scrolllt{
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(calc(-29vh*2));
+    }
+  }
+  .disablelt{
+    display: block;   
+  }
+  .slide-trackeb{
+    animation: scrolleb 15s linear infinite;
+  }
+  
+  @keyframes scrolleb{
+    0%{
+      transform: translateX(calc(-29vh*2));
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+  .disableeb{
+    display: block;   
+  }
+}
+/* Name on photo  */
+
+.DKbaidya:before{
+  content:"Prof. D K Baidya";
+}
+.DKbaidya:after{
+  content:"Prof. D K Baidya";
+}
+.aniruddhasengupta:before{
+  content:"Prof. Aniruddha Sengupta";
+}
+.aniruddhasengupta:after{
+  content:"Prof. Aniruddha Sengupta";
+}
+.mihirk:before{
+  content:"Mihir Kumar Choudhury";
+}
+.mihirk:after{
+  content:"Mihir Kumar Choudhury";
+}
+.name1:before{
+  content:"Mahendra Bera";
+}
+.name1:after{
+  content:"Mahendra Bera";
+}
+.name2:before{
+  content:"Ashutosh Garg";
+}
+.name2:after{
+  content:"Ashutosh Garg";
+}
+.name3:before{
+  content:"Ashok Jangid";
+}
+.name3:after{
+  content:"Ashok Jangid";
+}
+.name4:before{
+  content:"Ashish Pratap Singh";
+}
+.name4:after{
+  content:"Ashish Pratap Singh";
+}
+.name5:before{
+  content:"Anurag Bharti";
+}
+.name5:after{
+  content:"Anurag Bharti";
+}
+.name6:before{
+  content:"Rakshit Yadav";
+}
+.name6:after{
+  content:"Rakshit Yadav";
+}
+.name7:before{
+  content:"Anant Pandey";
+}
+.name7:after{
+  content:"Anant Pandey";
+}
+.name8:before{
+  content:"Satyaki Biswas";
+}
+.name8:after{
+  content:"Satyaki Biswas";
+}
+.name9:before{
+  content:"Anshuman Raj";
+}
+.name9:after{
+  content:"Anshuman Raj";
+}
+.name10:before{
+  content:"Praujjawal Prabhakar";
+}
+.name10:after{
+  content:"Praujjawal Prabhakar";
+}
+.name11:before{
+  content:"Nishant Bhagat";
+}
+.name11:after{
+  content:"Nishant Bhagat";
+}
+.name12:before{
+  content:"Ayan AKhtar";
+}
+.name12:after{
+  content:"Ayan AKhtar";
+}
+.name13:before{
+  content:"Mohd. Armugan Sarwar";
+}
+.name13:after{
+  content:"Mohd. Armugan Sarwar";
+}
+.name14:before{
+  content:"Bhagyashree Sharma";
+}
+.name14:after{
+  content:"Bhagyashree Sharma";
+}
+.name15:before{
+  content:"Ishwar Kashyap";
+}
+.name15:after{
+  content:"Ishwar Kashyap";
+}
+.name16:before{
+  content:"Pratush Tiwari";
+}
+.name16:after{
+  content:"Pratush Tiwari";
+}
+.name17:before{
+  content:"Ravi Kumar";
+}
+.name17:after{
+  content:"Ravi Kumar";
+}
+.name18:before{
+  content:"Utkarsh Gupta";
+}
+.name18:after{
+  content:"Utkarsh Gupta";
+}
+.name19:after{
+  content:"Aditya Pandey";
+}
+.name19:before{
+  content:"Aditya Pandey";
+}
+.name20:after{
+  content:"Abhijeet Nigam";
+}
+.name20:before{
+  content:"Abhijeet Nigam";
+}.name21:after{
+  content:"Rounak Das";
+}
+.name21:before{
+  content:"Rounak Das";
+}.name22:after{
+  content:"Yellanki Sai Likitha";
+}
+.name22:before{
+  content:"Yellanki Sai Likitha";
+}.name23:after{
+  content:"Aayushi Priya";
+}
+.name23:before{
+  content:"Aayushi Priya";
+}.name24:after{
+  content:"Nadimpalli Deepthi";
+}
+.name24:before{
+  content:"Nadimpalli Deepthi";
+}.name25:after{
+  content:"Kunal Kumar";
+}
+.name25:before{
+  content:"Kunal Kumar";
+}.name26:after{
+  content:"Naman Shankar";
+}
+.name26:before{
+  content:"Naman Shankar";
+}.name27:after{
+  content:"Piyush Yadav";
+}
+.name27:before{
+  content:"Piyush Yadav";
+}.name28:after{
+  content:"N Rachana Gupta";
+}
+.name28:before{
+  content:"N Rachana Gupta";
+}.name29:after{
+  content:"Debabrata Sarkar";
+}
+.name29:before{
+  content:"Debabrata Sarkar";
+}.name30:after{
+  content:"Kaushikee Biswas";
+}
+.name30:before{
+  content:"Kaushikee Biswas";
+}.name31:after{
+  content:"Sonu Kumar Rai";
+}
+.name31:before{
+  content:"Sonu Kumar Rai";
+}.name32:after{
+  content:"Aditya Chakravorty";
+}
+.name32:before{
+  content:"Aditya Chakravorty";
+}.name33:after{
+  content:"Challa Naga Sujan";
+}
+.name33:before{
+  content:"Challa Naga Sujan";
+}.name34:after{
+  content:"Palligiri Meghna";
+}
+.name34:before{
+  content:"Palligiri Meghna";
+}.name35:after{
+  content:"Shivangi Singh";
+}
+.name35:before{
+  content:"Shivangi Singh";
+}.name36:after{
+  content:"Sai Teja Anantha";
+}
+.name36:before{
+  content:"Sai Teja Anantha";
+}.name37:after{
+  content:"Mohammad Shoaib";
+}
+.name37:before{
+  content:"Mohammad Shoaib";
+}.name38:after{
+  content:"Vivek Agarwal";
+}
+.name38:before{
+  content:"Vivek Agarwal";
+}.name39:after{
+  content:"Islavath Mohan Naik";
+}
+.name39:before{
+  content:"Islavath Mohan Naik";
+}.name40:after{
+  content:"Aditya Sharma";
+}
+.name40:before{
+  content:"Aditya Sharma";
+}.name41:after{
+  content:"Vaishnavi Pandey";
+}
+.name41:before{
+  content:"Vaishnavi Pandey";
+}
+.name42:after{
+  content:"Jay Nagwani";
+}
+.name42:before{
+  content:"Jay Nagwani";
+}.name43:after{
+  content:"Lilesh Bhuskute";
+}
+.name43:before{
+  content:"Lilesh Bhuskute";
+}.name44:after{
+  content:"Sheetanshu Shekhar";
+}
+.name44:before{
+  content:"Sheetanshu Shekhar";
+}.name45:after{
+  content:"Jahnavi Poloju";
+}
+.name45:before{
+  content:"Jahnavi Poloju";
+}.name46:after{
+  content:"Harsh Kumar";
+}
+.name46:before{
+  content:"Harsh Kumar";
+}.name47:after{
+  content:"Pooja Saini";
+}
+.name47:before{
+  content:"Pooja Saini";
+}.name48:after{
+  content:"Aman Sagar";
+}
+.name48:before{
+  content:"Aman Sagar";
+}.name49:after{
+  content:"Arunendra Pratap Singh";
+}
+.name49:before{
+  content:"Arunendra Pratap Singh";
+}.name50:after{
+  content:"Anjana Jawahar";
+}
+.name50:before{
+  content:"Anjana Jawahar";
+}.name51:after{
+  content:"Sanyam Jhuria";
+}
+.name51:before{
+  content:"Sanyam Jhuria";
+}
